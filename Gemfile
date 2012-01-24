@@ -1,9 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.2.0'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+group :development do
+	gem 'sqlite3', '1.3.5'
+end
 
-gem 'sqlite3', '1.3.3'
+group :asset do
+	gem 'sass-rails', '3.2.2'
+	gem 'coffee-rails', '3.2.0'
+	
+	gem 'uglifier', '1.0.3'
+end
+
+gem 'jquery-rails', '2.0.0'
+
+group :production do 
+	gem 'pg', '0.12.2'
+end
 
